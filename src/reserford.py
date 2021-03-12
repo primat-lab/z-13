@@ -29,14 +29,14 @@ class Reserford:
             nonlocal pos_alpha, pos_core
             r12 = pos_alpha - pos_core
             f = self.k * self.alphaCharge * self.coreCharge / np.dot(r12, r12) * r12 / np.sqrt(np.dot(r12, r12))
-            a = f/self.alphaMass
+            a = f / self.alphaMass
             return a
 
         def apply_forces_core():
             nonlocal pos_alpha, pos_core
             r12 = pos_core - pos_alpha
             f = self.k * self.alphaCharge * self.coreCharge / np.dot(r12, r12) * r12 / np.sqrt(np.dot(r12, r12))
-            a = f/self.coreMass
+            a = f / self.coreMass
             return a
 
         def update(dt):
@@ -96,12 +96,18 @@ class Reserford:
             plt.show()
         else:
             plt.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
+            plt.show()
             plt.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
+            plt.show()
             plt.plot([row[1][0] for row in self.val], [row[1][1] for row in self.val])
+            plt.show()
             plt.plot([row[4][0] for row in self.val], [row[4][1] for row in self.val])
+            plt.show()
             plt.plot([row[2][0] for row in self.val], [row[2][1] for row in self.val])
+            plt.show()
             plt.plot([row[5][0] for row in self.val], [row[5][1] for row in self.val])
-        
+            plt.show()
+
 
 if __name__ == '__main__':
     r = Reserford()
