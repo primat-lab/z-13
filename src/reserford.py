@@ -18,7 +18,7 @@ class Reserford:
         self.core_x = 1
         self.core_y = 0.51
         self.k = 0.05
-        self.pos_v = []
+        self.val = []
 
     def change_values(self, **params):
         self.alphaMass = params['alphaMass']
