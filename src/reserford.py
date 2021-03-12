@@ -86,6 +86,7 @@ class Reserford:
             ax2 = plt.subplot(323)
             ax1.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
             ax1.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
+            ax1.scatter([row[3][0] for row in self.val], [row[3][1] for row in self.val])
             ax2.plot([row[1][0] for row in self.val], [row[1][1] for row in self.val])
             ax3 = plt.subplot(324)
             ax3.plot([row[4][0] for row in self.val], [row[4][1] for row in self.val])
@@ -95,6 +96,7 @@ class Reserford:
             ax5.plot([row[5][0] for row in self.val], [row[5][1] for row in self.val])
             plt.show()
         else:
+            plt.scatter([row[0][0] for row in self.val], [row[0][1] for row in self.val])
             plt.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
             plt.show()
             plt.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
