@@ -20,15 +20,6 @@ class Reserford:
         self.k = 0.05
         self.val = []
 
-    def change_values(self, **params):
-        self.alphaMass = params['alphaMass']
-        self.alphaEnergy = params['alphaEnergy']
-        self.alphaCharge = params['alphaCharge']
-        self.coreMass = params['coreMass']
-        self.coreCharge = params['coreCharge']
-        self.core_x = params['x']
-        self.core_y = params['y']
-
     def calculate(self):
         """via Verlet integration"""
 
