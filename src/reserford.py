@@ -73,13 +73,13 @@ class Reserford:
         acc_alpha = apply_forces_alpha()
         acc_core = apply_forces_core()
         
+        self.val = []
         t = 0
         delta_t = 0.001
         while t < 10:
+            self.val.append([pos_alpha, vel_alpha, acc_alpha, pos_core, vel_core, acc_core, t])
             t += delta_t
             update(delta_t)
-            self.pos_v.append(vel_alpha)
-            self.val.append([pos_alpha, vel_alpha, acc_alpha, pos_core, vel_core, acc_core, t])
 
     def plot(self):
         """
