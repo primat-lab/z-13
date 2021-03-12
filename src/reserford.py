@@ -18,6 +18,8 @@ class Reserford:
         self.core_x = 1
         self.core_y = 0.51
         self.k = 0.05
+        self.time = 10
+        self.delta_t = 0.001
         self.val = []
 
     def calculate(self):
@@ -66,11 +68,10 @@ class Reserford:
         
         self.val = []
         t = 0
-        delta_t = 0.001
-        while t < 10:
+        while t < self.time:
             self.val.append([pos_alpha, vel_alpha, acc_alpha, pos_core, vel_core, acc_core, t])
-            t += delta_t
-            update(delta_t)
+            t += self.delta_t
+            update(self.delta_t)
 
     def plot(self):
         """
