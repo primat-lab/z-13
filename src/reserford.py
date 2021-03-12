@@ -96,7 +96,7 @@ class Reserford:
             ax5.plot([row[5][0] for row in self.val], [row[5][1] for row in self.val])
             plt.show()
         else:
-            plt.scatter([row[0][0] for row in self.val], [row[0][1] for row in self.val])
+            plt.scatter([row[3][0] for row in self.val], [row[3][1] for row in self.val])
             plt.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
             plt.show()
             plt.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
