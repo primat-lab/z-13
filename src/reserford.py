@@ -65,7 +65,7 @@ class Reserford:
 
         acc_alpha = apply_forces_alpha()
         acc_core = apply_forces_core()
-        
+
         self.val = []
         t = 0
         while t < self.time:
@@ -81,20 +81,27 @@ class Reserford:
         4. alpha-p. acceleration hodograph
         5. core acceleration hodograph
         """
-
-        ax1 = plt.subplot(311)
-        ax2 = plt.subplot(323)
-        ax1.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
-        ax1.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
-        ax2.plot([row[1][0] for row in self.val], [row[1][1] for row in self.val])
-        ax3 = plt.subplot(324)
-        ax3.plot([row[4][0] for row in self.val], [row[4][1] for row in self.val])
-        ax4 = plt.subplot(325)
-        ax4.plot([row[2][0] for row in self.val], [row[2][1] for row in self.val])
-        ax5 = plt.subplot(326)
-        ax5.plot([row[5][0] for row in self.val], [row[5][1] for row in self.val])
-        plt.show()
-
+        if __name__ == '__main__':
+            ax1 = plt.subplot(311)
+            ax2 = plt.subplot(323)
+            ax1.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
+            ax1.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
+            ax2.plot([row[1][0] for row in self.val], [row[1][1] for row in self.val])
+            ax3 = plt.subplot(324)
+            ax3.plot([row[4][0] for row in self.val], [row[4][1] for row in self.val])
+            ax4 = plt.subplot(325)
+            ax4.plot([row[2][0] for row in self.val], [row[2][1] for row in self.val])
+            ax5 = plt.subplot(326)
+            ax5.plot([row[5][0] for row in self.val], [row[5][1] for row in self.val])
+            plt.show()
+        else:
+            plt.plot([row[0][0] for row in self.val], [row[0][1] for row in self.val])
+            plt.plot([row[3][0] for row in self.val], [row[3][1] for row in self.val])
+            plt.plot([row[1][0] for row in self.val], [row[1][1] for row in self.val])
+            plt.plot([row[4][0] for row in self.val], [row[4][1] for row in self.val])
+            plt.plot([row[2][0] for row in self.val], [row[2][1] for row in self.val])
+            plt.plot([row[5][0] for row in self.val], [row[5][1] for row in self.val])
+        
 
 if __name__ == '__main__':
     r = Reserford()
