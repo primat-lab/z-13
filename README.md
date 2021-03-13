@@ -9,3 +9,6 @@
 Внутри же шара, напряженность э.п. точки, заданной радиус-вектором, проведенным из его центра, ![formula](https://render.githubusercontent.com/render/math?math=\vec{r}_{12}) будет вычисляться по такой формуле:
 
 ![formula](https://render.githubusercontent.com/render/math?math=\vec{E}=k\cdot\frac{q(R-|r_{12}|)}{r_{12}^2}\cdot\frac{\vec{r}_{12}}{|r_{12}|})
+
+Используемый алгоритм - Верле скорости.
+https://ru.qaz.wiki/wiki/Verlet_integration#Velocity_Verlet
